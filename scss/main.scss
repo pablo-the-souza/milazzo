@@ -20,14 +20,14 @@ h1,h2,h3 {
     margin:0 ; 
     font-weight: 400; 
 
-    &.lg-heading {
-        font-size:6rem
+    &.lg-heading { //used for nesting
+        font-size:6rem //multiplier of the standard fontsize: 16px 
     }
 
     &.sm-heading {
         margin-bottom: 2rem; 
         padding: 0.2rem 1rem; 
-        background: rgba (lighten ($primary-color, 2), 0.5); 
+        background: rgba(lighten($primary-color, 2), 0.9);  // parentesis have to be connected to rgba
     }
 }
 
@@ -38,7 +38,7 @@ a {
 
 header {
     position: fixed; 
-    z-index: 2; //how close to you
+    z-index: 2; //how close to you ???
     width: 100%; 
 }
 
