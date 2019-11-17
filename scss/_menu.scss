@@ -1,15 +1,22 @@
 .menu-btn {
-    position: absolute; 
+    position: absolute; //we want to position it exactly 
     z-index: 3;
     right: 35px; 
     top: 35px; 
     cursor: pointer; 
     @include easeOut; 
-}
 
 .btn-line {
     width: 28px; 
     height: 3px; 
     margin: 0 0 5px 0; 
     background: white; 
+    @include easeOut;
+}
+
+&.close {
+    transform: rotate(180deg);
+}
+//Rotate Into x With Menu Lines
+
 }

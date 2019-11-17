@@ -5,12 +5,14 @@
   top: 35px;
   cursor: pointer;
   transition: all 0.5s ease-out; }
-
-.btn-line {
-  width: 28px;
-  height: 3px;
-  margin: 0 0 5px 0;
-  background: white; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: white;
+    transition: all 0.5s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
 
 * {
   box-sizing: border-box; }
@@ -26,14 +28,14 @@ body {
     background: url(../img/bg.jpg);
     background-attachment: fixed;
     background-size: cover; }
-    body#bg-img .overlay {
+    body#bg-img:after {
       position: absolute;
       top: 0;
       right: 0;
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(192, 192, 192, 0.9); }
+      background: rgba(192, 192, 192, 0.1); }
 
 h1, h2, h3 {
   margin: 0;
@@ -43,7 +45,7 @@ h1, h2, h3 {
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(197, 197, 197, 0.9); }
+    background: rgba(197, 197, 197, 0.1); }
 
 a {
   color: grey;
