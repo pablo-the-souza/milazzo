@@ -15,15 +15,41 @@ $background-opacity: 0.1;
       background-attachment: fixed;
       background-size: cover;
 
-      &:after { //don't forget to add div to html, ..... Before or after the element, in this case BG   
+      &:after {
+        //don't forget to add div to html, ..... Before or after the element, in this case BG
         position: absolute;
         top: 0;
         right: 0;
         width: 100%;
         height: 100%;
-        z-index:-1; // makes sure background is behind :D very good stuff
+        z-index: -1; // makes sure background is behind :D very good stuff
         background: rgba($primary-color, $background-opacity);
       }
     }
+  }
+}
+
+// Media Query Mixins
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXL {
+  @media screen and (min-width: 1171px) {
+    @content;
   }
 }
